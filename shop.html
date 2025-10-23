@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>phuongling.vn</title>
+	<style type="text/css">
+		*{
+            font-family: 'tahoma', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .dorong{
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+        header{
+            background: #bdc3c7;
+            padding: 1px 0;
+        }
+        header .dorong .tren{
+            display: flex;
+            align-items: center;
+        }
+        header .dorong .tren .logo{
+            flex-basis: 10%;
+        }
+        header .dorong .tren .menu{
+            flex-basis: 80%;
+        }
+       
+        header .dorong .tren .the .logo2{
+            position: relative;
+            width: 40px;
+        }
+
+        header .dorong .tren .the .logo2 span{
+            position: absolute;
+            right: -10px;
+            width: 50%;
+            height: 40%;
+            background: #b71540;
+            color: #fff;
+            border-radius: 60%;
+        }
+        header .dorong .tren .menu nav .link li{
+            display: inline-block;
+            list-style: none;
+            margin: 0 20px;
+        }
+        header .dorong .tren .menu nav .link li a{
+            text-decoration: none;
+            color:black;
+            font-weight: 400;
+        }
+        header .dorong .tren .menu nav .link li a:hover{
+            text-decoration: underline;
+        }
+        .logo img{
+	       width: 90%;
+	       height: 80px;
+	       float: left;
+        }
+        .logo2 img{
+             width: 90%;
+             height: 70px;
+        /* hết phần menu */
+        }
+        .body{
+            padding: 30px;
+        }
+        .gif img{
+            width: 1350px;
+            height: 200px;
+        }
+      
+       .body_1{
+            padding: 8px 0; 
+        }
+        .body_1 .dorong .title{
+            width: 1345px;
+            text-align: center;
+            background: #ddd;
+            padding: 15px 0;
+            margin-left: -105px;
+        }
+        .body_1 .dorong .title h3{  
+            font-weight:600;        
+        }
+        /* hết phần h3 */
+        .body_1 .dorong .hienthisp{
+            margin: 30px 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .body_1 .dorong .hienthisp .khungsp {
+            flex-basis: 18%;/* định dạng khung để bán hàng */
+            margin: 10px 5px;
+        }
+        .body_1 .dorong .hienthisp .khungsp .sp{
+            position: relative;
+            display: block;
+            padding: 20px;
+            border-radius: 20px; /* tạo góc tròn */
+            border: 1px solid #ccc;
+        }
+
+        .body_1 .dorong .hienthisp .khungsp .sp .image img{
+            width: 100%;
+            border-radius: 20px
+
+        }
+        .body_1 .dorong .hienthisp .khungsp .sp .nhap {
+            text-align: left;
+            padding: 5px 0;
+        } 
+        .body_1 .dorong .hienthisp .khungsp .sp .nhap p{
+            font-weight: 500;
+            margin: 5px 0;
+            color: #b71540;
+        }
+        .body_1 .dorong .hienthisp .khungsp .sp .mau{
+            display: flex;
+            align-items: center;
+        }
+        .body_1 .dorong .hienthisp .khungsp .sp .mau span{
+            width: 20px;
+            height: 20px;
+            background:#60a3bc;
+            margin: 0 5px;
+            border-radius: 20px;
+            box-shadow: 2px 2px 5px black; /* đổ bóng theo chiều ngang dọc 2px,độ mờ 5px,màu đổ bóng đen trong suốt 0,8 */
+
+        }
+        .body_1 .dorong .hienthisp .khungsp .sp .nut{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            opacity: 0;
+            transition: 0.3s;
+
+        }
+        .body_1 .dorong .hienthisp .khungsp .sp:hover .nut{
+            opacity:1 ;
+            top:50%;
+        }
+        .body_1 .dorong .hienthisp .khungsp .sp .nut a{
+            display: inline-block;
+            margin: 0 5px;
+            padding: 5px 5px;
+            background:lightpink;
+            color: #ffff;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: 3s;
+        }
+        .body_1.one .hienthisp .khungsp .sp .nhap span{
+            color: #b71540;
+            font-weight: 600;
+        }
+        .body_1.one .hienthisp .khungsp .sp .nhap span s{
+            font-weight: 300;
+        }
+        .body_1.one .hienthisp .khungsp .sp span.sale{
+            width: 50px;
+            height: 50px;
+            background: #FF0040;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #ffffff;
+            border-radius: 50%;
+            box-shadow: 3px 3px 5px #FF0040;
+            position: absolute;
+            top: -10px;
+            right: 0;
+        }
+
+        footer{
+            background: #dfe6e9;
+            padding: 20px 0 0 0;
+        }
+        footer .dorong .row{
+            display: flex;
+   
+        }
+        footer .dorong .row .danhmuc{
+            flex-basis: 30%; 
+        }   
+        footer p.ten{
+            text-align: center;
+            padding:10px 0;
+            margin: 0;
+            background: #000;
+            color: #fff;
+            font-size: 12px;
+        }
+        footer .dorong .row .danhmuc img{
+            width: 100px;
+            height: 100px;
+        }
+        footer .dorong .row .danhmuc .name{
+            font-size: 32px;
+            font-weight: 600;  
+        }
+        
+        footer .dorong .row .danhmuc ul{
+            list-style: none;
+        }
+        footer .dorong .row .danhmuc ul li{
+            margin: 10px 0;
+
+        }
+        footer .dorong .row .danhmuc .title{
+            color: #3c6382;
+           
+        }
+        footer .dorong .row .danhmuc ul li a{
+            text-decoration: none;
+            color: #0a3d62;
+            
+        }
+        footer .dorong .row .danhmuc ul li a:hover{
+            text-decoration: underline;
+        } 
+</style>
+</head>
+<body>
+	<header>
+        <div class="dorong">
+            <div class="tren">
+                <div class="logo">
+                    <img src="E:\NguyenPhuongLinh_LopTT2\CSS\logo.jpg" alt="">
+                </div>
+                <div class="menu">
+                    <nav>
+                        <ul class="link">
+                            <li><a href="">Trang chủ</a></li>
+                            <li><a href="">Giới thiệu</a></li>
+                            <li><a href="">Sản phẩm</a></li>
+                            <li><a href="">Liên hệ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="the">
+                    <div class="logo2" >
+                        <img src="https://bizweb.dktcdn.net/100/405/207/themes/800966/assets/cart.png?1641893409229" alt="">
+                        <span>+9</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="body">
+        <div class="gif">
+            <img src="https://down-vn.img.susercontent.com/file/d64d81ed5b77cc15c9e22d9d1d28879e" alt="">
+        </div>
+    </section>
+    <section class="body_1">
+        <div class="dorong">
+            <div class="title"><h3>Sản phẩm bán chạy</h3></div>
+            <div class="hienthisp">
+                <div class="khungsp">
+                    <div class="sp">
+                        <div class="image">
+                            <img src="https://laz-img-sg.alicdn.com/p/aea1f6cac066e0ebbd570f1cf8f15786.jpg" alt="">
+                        </div>
+                        <div class="nhap">
+                            <h3>Váy đi biển</h3>
+                            <p>200.000 đ</p>
+                        </div>
+                        <div class="mau">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                         <div class="nut">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="khungsp">
+                    <div class="sp">
+                        <div class="image">
+                            <img src="https://vn-test-11.slatic.net/p/c22601915838fce7af790bcbfc2716dd.jpg" alt="">
+                        </div>
+                        <div class="nhap">
+                            <h3>Áo phông </h3>
+                            <p>180.000 đ</p>
+                        </div>
+                        <div class="mau">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="nut">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="khungsp">
+                    <div class="sp">
+                        <div class="image">
+                            <img src="https://salt.tikicdn.com/cache/w1200/ts/product/91/9b/58/02ffea443ed654450178406ea5e03013.jpg" alt="">
+                        </div>
+                        <div class="nhap">
+                            <h3>Dép lông </h3>
+                            <p>120.000 đ</p>
+                        </div>
+                        <div class="mau">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="nut">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="khungsp">
+                    <div class="sp">
+                        <div class="image">
+                            <img src="https://cf.shopee.vn/file/910149da82e8c763aecbe0199db4f2fc" alt="">
+                        </div>
+                        <div class="nhap">
+                            <h3>Quần short </h3>
+                            <p>250.000 đ</p>
+                        </div>
+                        <div class="mau">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="nut">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="khungsp">
+                    <div class="sp">
+                        <div class="image">
+                            <img src="https://img.alicdn.com/imgextra/i3/818972668/O1CN011VZzApXYoP3ihxC_!!818972668.jpg_400x400.jpg" alt="">
+                        </div>
+                        <div class="nhap">
+                            <h3>Đồ ngủ </h3>
+                            <p>150.000 đ</p>
+                        </div>
+                        <div class="mau">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="nut">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="khungsp">
+                    <div class="sp">
+                        <div class="image">
+                            <img src="https://down-vn.img.susercontent.com/file/ebe13971896c9c33939517a1d11ca19b" alt="">
+                        </div>
+                        <div class="nhap">
+                            <h3>Đồ bơi </h3>
+                            <p>300.000 đ</p>
+                        </div>
+                        <div class="mau">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="nut">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="khungsp">
+                    <div class="sp">
+                        <div class="image">
+                            <img src="https://vn-test-11.slatic.net/p/51c541d09b05737b79f553fc8f8e7a97.jpg" alt="">
+                        </div>
+                        <div class="nhap">
+                            <h3>Áo baby tee </h3>
+                            <p>250.000 đ</p>
+                        </div>
+                        <div class="mau">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="nut">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="khungsp">
+                    <div class="sp">
+                        <div class="image">
+                            <img src="https://cf.shopee.vn/file/716ef65a13d5a35c1839c3610d8c8047" alt="">
+                        </div>
+                        <div class="nhap">
+                            <h3>Áo croptop hoa </h3>
+                            <p>120.000 đ</p>
+                        </div>
+                        <div class="mau">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="nut">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="khungsp">
+                    <div class="sp">
+                        <div class="image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7DkhaUmWwOgN6smAqc8r_dQIhGjs5syOBPsIFutvDc6zgPCIZYUpz0OWb5WlG0tL-mEQ&usqp=CAU" alt="">
+                        </div>
+                        <div class="nhap">
+                            <h3>Giày boot nữ </h3>
+                            <p>500.000 đ</p>
+                        </div>
+                        <div class="mau">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="nut">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="khungsp">
+                    <div class="sp">
+                        <div class="image">
+                            <img src="https://vn-live-03.slatic.net/p/3b1d0a28ebf979756e3bf121db7bb5f6.jpg" alt="">
+                        </div>
+                        <div class="nhap">
+                            <h3>Quần ống suông </h3>
+                            <p>250.000 đ</p>
+                        </div>
+                        <div class="mau">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="nut">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>      
+        </section>
+        <section class="body_1 one ">
+        <div class="dorong">
+            <div class="title"><h3>Sản phẩm khuyến mãi</h3></div>
+            <div class="hienthisp">
+                <div class="khungsp">
+                    <div class="sp">
+                        <div class="image">
+                            <img src="https://a.ipricegroup.com/media/1Ly/d726b20d-770b-43b6-a39b-ea73af5a743c.jpeg" alt="">
+                        </div>
+                        <div class="nhap">
+                            <h3>Áo sơ mi croptop </h3>
+                            <span><s>200.000đ</s></span>
+                            <span>150.000đ</span>
+                        </div>
+                        <span class="sale">25%</span>
+                        <div class="mau">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="nut">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                 <div class="khungsp">
+                    <div class="sp">
+                        <div class="image">
+                            <img src="https://cf.shopee.vn/file/3c3695a10fef7d9655d96ea5b05da7de" alt="">
+                        </div>
+                        <div class="nhap">
+                            <h3>Chân váy đuôi cá </h3>
+                            <span><s>250.000đ</s></span>
+                            <span>212.500đ</span>
+                        </div>
+                        <span class="sale">15%</span>
+                        <div class="mau">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="nut">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                 <div class="khungsp">
+                    <div class="sp">
+                        <div class="image">
+                            <img src="https://cf.shopee.vn/file/a5a9561fffec843a37153e29536595e9" alt="">
+                        </div>
+                        <div class="nhap">
+                            <h3>Set váy công sở  </h3>
+                            <span><s>350.000đ</s></span>
+                            <span>315.000đ</span>
+                        </div>
+                        <span class="sale">10%</span>
+                        <div class="mau">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="nut">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                 <div class="khungsp">
+                    <div class="sp">
+                        <div class="image">
+                            <img src="https://cf.shopee.vn/file/d1ce5f0aeb5272b6536b987e1396456d" alt="">
+                        </div>
+                        <div class="nhap">
+                            <h3>Áo croptop </h3>
+                            <span><s>180.000đ</s></span>
+                            <span>171.000đ</span>
+                        </div>
+                        <span class="sale">5%</span>
+                        <div class="mau">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="nut">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                 <div class="khungsp">
+                    <div class="sp">
+                        <div class="image">
+                            <img src="https://prices.vn/storage/photo/product/lac-tay-bac-nu-925-vong-tay-bac-nu-co-4-la-dinh-da-cao-cap-ltn0113.png" alt="">
+                        </div>
+                        <div class="nhap">
+                            <h3>Vòng tay bạc </h3>
+                            <span><del>500.000đ</del></span>
+                            <span>475.000đ</span>
+                        </div>
+                        <span class="sale">5%</span>
+                        <div class="mau">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="nut">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                 <div class="khungsp">
+                    <div class="sp">
+                        <div class="image">
+                            <img src="https://cf.shopee.vn/file/26417d56e1d3dab6c1abe6bfe8aba3c0_tn" alt="">
+                        </div>
+                        <div class="nhap">
+                            <h3>Sét mùa đông </h3>
+                            <span><s>400.000đ</s></span>
+                            <span>320.000đ</span>
+                        </div>
+                        <span class="sale">20%</span>
+                        <div class="mau">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="nut">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                 <div class="khungsp">
+                    <div class="sp">
+                        <div class="image">
+                            <img src="https://tuychon.vn/wp-content/uploads/2020/02/bia-do-ngu.jpg" alt="">
+                        </div>
+                        <div class="nhap">
+                            <h3>Bộ ngủ </h3>
+                            <span><s>170.000đ</s></span>
+                            <span>156.000đ</span>
+                        </div>
+                        <span class="sale">8%</span>
+                        <div class="mau">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="nut">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                 <div class="khungsp">
+                    <div class="sp">
+                        <div class="image">
+                            <img src="https://down-vn.img.susercontent.com/file/0a63b79b6c340d35a8700c60002baddd" alt="">
+                        </div>
+                        <div class="nhap">
+                            <h3>Mũ đi biển </h3>
+                            <span><s>105.000đ</s></span>
+                            <span>94.500đ</span>
+                        </div>
+                        <span class="sale">10%</span>
+                        <div class="mau">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="nut">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                 <div class="khungsp">
+                    <div class="sp">
+                        <div class="image">
+                            <img src="https://img.websosanh.vn/v10/users/review/images/umdqm96bpoej4/bang-mau-son-black-rouge.jpg?compress=85" alt="">
+                        </div>
+                        <div class="nhap">
+                            <h3>Son background </h3>
+                            <span><s>250.000đ</s></span>
+                            <span>237.500đ</span>
+                        </div>
+                        <span class="sale">5%</span>
+                        <div class="mau">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="nut">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+                 <div class="khungsp">
+                    <div class="sp">
+                        <div class="image">
+                            <img src="https://scontent.fhph1-1.fna.fbcdn.net/v/t39.30808-6/339326560_941183140565799_5366656515096366873_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=oVv3XPqUex8AX8VA3l6&_nc_ht=scontent.fhph1-1.fna&oh=00_AfCBrtewaPr-S-zKCZdZX9_tzTkfLtAuFGeMMF89pJju1w&oe=6438A39C" alt="">
+                        </div>
+                        <div class="nhap">
+                            <h3>Ngọc Ánh 20+ </h3>
+                            <span><s></s></span>
+                            <span>Đấu giá</span>
+                        </div>
+                        <span class="sale">Đấu giá</span>
+                        <div class="mau">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                       <div class="nut">
+                        <a href="#">Mua</a>
+                        <a href="#">Xem chi tiết</a>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <footer>
+        <div class="dorong">
+            <div class="row">
+                <div class="danhmuc"> 
+                    <h3 class="name">LINH SHOP</h3>
+                    <div>
+                        <img src="E:\NguyenPhuongLinh_LopTT2\CSS\logo.jpg" alt="">
+                    </div>
+                    
+                </div>
+                <div class="danhmuc">
+                    <h3 class="title">Danh mục sản phẩm 1</h3>
+                    <ul>
+                        <li><a href="">Sơ mi nữ</a></li>
+                        <li><a href="">Sơ mi croptop</a></li>
+                        <li><a href="">Áo khoác nữ</a></li>
+                        <li><a href="">Áo thun nữ</a></li>
+                    </ul>
+                </div>
+                <div class="danhmuc">
+                    <h3 class="title">Danh mục sản phẩm 2</h3>
+                    <ul>
+                        <li><a href="">Nước hoa nữ</a></li>
+                        <li><a href="">Các loại phụ kiện</a></li>
+                        <li><a href="">Đồ bộ nữ</a></li>
+                        <li><a href="">Đồ lót nữ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p class="ten">Website design By &copy; NPL_LINH </p>
+    </footer>
+</body>
+</html>
+
